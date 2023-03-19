@@ -7,6 +7,15 @@ public class Zoologico {
 	
 	public Zoologico() {}
 	
+	public Zoologico(String nombre) {
+		this.setNombre(nombre);
+	}
+	
+	public Zoologico(String nombre, String ubicacion) {
+		this.setNombre(nombre);
+		this.setUbicacion(ubicacion);
+	}
+	
 	public Zoologico(String nombre, String ubicacion, Zona zonas[]) {
 		this.setNombre(nombre);
 		this.setUbicacion(ubicacion);

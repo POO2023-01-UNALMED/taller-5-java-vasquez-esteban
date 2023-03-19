@@ -12,6 +12,44 @@ public class Animal {
 	
 	public Animal() {}
 	
+	public Animal(int totalAnimales) {
+		
+		this.setTotalAnimales(totalAnimales);
+	}
+	
+	public Animal(int totalAnimales, String nombre) {
+		
+		this.setTotalAnimales(totalAnimales);
+		this.setNombre(nombre);
+	}
+	
+	public Animal(int totalAnimales, String nombre, 
+			int edad) {
+		
+		this.setTotalAnimales(totalAnimales);
+		this.setNombre(nombre);
+		this.setEdad(edad);
+	}
+	
+	public Animal(int totalAnimales, String nombre, 
+			int edad, String habitat) {
+		
+		this.setTotalAnimales(totalAnimales);
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+	}
+	
+	public Animal(int totalAnimales, String nombre, 
+			int edad, String habitat, String genero) {
+		
+		this.setTotalAnimales(totalAnimales);
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
+	}
+	
 	public Animal(int totalAnimales, String nombre, 
 			int edad, String habitat, String genero, Zona zona[]) {
 		

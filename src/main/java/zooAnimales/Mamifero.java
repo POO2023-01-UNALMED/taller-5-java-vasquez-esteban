@@ -12,6 +12,129 @@ public class Mamifero extends Animal {
 	public Mamifero() {}
 	
 	public Mamifero(
+			Mamifero listado[]) {
+			
+			this.setListado(listado);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas,
+			int totalAnimales) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+			
+			this.setTotalAnimales(totalAnimales);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas,
+			int totalAnimales, String nombre) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas,
+			int totalAnimales, String nombre, int edad) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas,
+			int totalAnimales, String nombre, int edad, 
+			String habitat) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+		}
+	
+	public Mamifero(
+			Mamifero listado[], int caballos, int leones,
+			boolean pelaje, int patas,
+			int totalAnimales, String nombre, int edad, 
+			String habitat, String genero) {
+			
+			this.setListado(listado);
+			this.caballos = caballos;
+			this.leones = leones;
+			this.setPelaje(pelaje);
+			this.setPatas(patas);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+		}
+	
+	public Mamifero(
 		Mamifero listado[], int caballos, int leones,
 		boolean pelaje, int patas,
 		int totalAnimales, String nombre, int edad, 

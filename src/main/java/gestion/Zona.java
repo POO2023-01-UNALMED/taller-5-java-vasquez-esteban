@@ -9,6 +9,15 @@ public class Zona {
 	
 	public Zona() {}
 	
+	public Zona(String nombre) {
+		this.setNombre(nombre);
+	}
+	
+	public Zona(String nombre, Zoologico zoo[]) {
+		this.setNombre(nombre);
+		this.setZoo(zoo);
+	}
+	
 	public Zona(String nombre, Zoologico zoo[], Animal animales[]) {
 		this.setNombre(nombre);
 		this.setZoo(zoo);

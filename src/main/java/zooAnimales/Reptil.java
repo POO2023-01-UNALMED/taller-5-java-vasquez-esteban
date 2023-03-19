@@ -12,6 +12,130 @@ public class Reptil extends Animal {
 	public Reptil() {}
 	
 	public Reptil(
+			Reptil listado[]) {
+			
+			this.setListado(listado);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola,
+			int totalAnimales) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+			
+			this.setTotalAnimales(totalAnimales);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola,
+			int totalAnimales, String nombre) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola,
+			int totalAnimales, String nombre, int edad) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola,
+			int totalAnimales, String nombre, int edad, 
+			String habitat) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+		}
+	
+	public Reptil(
+			Reptil listado[], int iguanas, int serpientes,
+			String colorEscamas, int largoCola,
+			int totalAnimales, String nombre, int edad, 
+			String habitat, String genero) {
+			
+			this.setListado(listado);
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.setColorEscamas(colorEscamas);
+			this.setLargoCola(largoCola);
+			
+			this.setTotalAnimales(totalAnimales);
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+		}
+	
+	public Reptil(
 		Reptil listado[], int iguanas, int serpientes,
 		String colorEscamas, int largoCola,
 		int totalAnimales, String nombre, int edad, 
