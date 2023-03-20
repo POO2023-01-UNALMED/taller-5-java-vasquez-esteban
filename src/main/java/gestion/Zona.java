@@ -1,35 +1,32 @@
 package gestion;
 
 import zooAnimales.Animal;
+import java.util.ArrayList;
 
 public class Zona {
 	private String nombre;
-	private Zoologico zoo[];
-	private Animal animales[];
+	private Zoologico zoo;
+	private ArrayList<Animal> animales = new ArrayList<Animal>();
 	
-	public Zona() {}
+	public Zona(String nombre, Zoologico zoo) {
+		this.nombre = nombre;
+		this.zoo = zoo;
+	}
 	
 	public Zona(String nombre) {
-		this.setNombre(nombre);
+		this(nombre, null);
 	}
 	
-	public Zona(String nombre, Zoologico zoo[]) {
-		this.setNombre(nombre);
-		this.setZoo(zoo);
+	public Zona(Zoologico zoo) {
+		this(null, zoo);
 	}
 	
-	public Zona(String nombre, Zoologico zoo[], Animal animales[]) {
-		this.setNombre(nombre);
-		this.setZoo(zoo);
-		this.setAnimales(animales);
+	public void agregarAnimales(Animal animal) {
+		animales.add(animal);
 	}
 	
-	public void agregarAnimales() {
-		
-	}
-	
-	public void cantidadAnimales() {
-		
+	public int cantidadAnimales() {
+		return this.animales.size();
 	}
 
 	public String getNombre() {
@@ -40,19 +37,19 @@ public class Zona {
 		this.nombre = nombre;
 	}
 
-	public Zoologico[] getZoo() {
+	public Zoologico getZoo() {
 		return zoo;
 	}
 
-	public void setZoo(Zoologico zoo[]) {
+	public void setZoo(Zoologico zoo) {
 		this.zoo = zoo;
 	}
 
-	public Animal[] getAnimales() {
-		return animales;
+	public ArrayList<Animal> getAnimales() {
+		return this.animales;
 	}
 
-	public void setAnimales(Animal animales[]) {
+	public void setAnimales(ArrayList<Animal> animales) {
 		this.animales = animales;
 	}
 }

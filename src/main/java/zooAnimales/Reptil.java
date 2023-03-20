@@ -1,147 +1,34 @@
 package zooAnimales;
 
-import gestion.Zona;
+import java.util.ArrayList;
 
 public class Reptil extends Animal {
-	private Reptil listado[];
+	private static ArrayList<Reptil> listado = new ArrayList<Reptil>();
 	public int iguanas;
 	public int serpientes;
 	private String colorEscamas;
 	private int largoCola;
 	
-	public Reptil() {super();}
-	
-	public Reptil(String nombre)
-		{
-			super();
-			this.setNombre(nombre);
-			}
+	public Reptil() {
+		this("", 0, "", "", "", 0);
+	}
 	
 	public Reptil(String nombre,
-			int edad)
+		int edad, String habitat, String genero, String colorEscamas, int largoCola)
 		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero, Zona zona[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Reptil listado[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
+			super(nombre, edad, habitat, genero);
 			
-			this.listado = listado;
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Reptil listado[], int iguanas)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.iguanas = iguanas;
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Reptil listado[], int iguanas, int serpientes)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			}
-	
-	public Reptil(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Reptil listado[], int iguanas, int serpientes, String colorEscamas)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
 			this.colorEscamas = colorEscamas;
-			}
-	
-	public Reptil(String nombre,
-		int edad, String habitat, String genero, Zona zona[], 
-		Reptil listado[], int iguanas, int serpientes, String colorEscamas, int largoCola)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.iguanas = iguanas;
-		this.serpientes = serpientes;
-		this.colorEscamas = colorEscamas;
-		this.largoCola = largoCola;
+			this.largoCola = largoCola;
 		}
 	
-	public void cantidadReptiles() {
-		
+	public static int cantidadReptiles() {
+		return listado.size();
 	}
 	
 	@Override
-	public void movimiento() {
-		
+	public String movimiento() {
+		return "reptar";
 	}
 	
 	public void crearIguana() {
@@ -152,12 +39,12 @@ public class Reptil extends Animal {
 		
 	}
 
-	public Reptil[] getListado() {
-		return listado;
+	public ArrayList<Reptil> getListado() {
+		return Reptil.listado;
 	}
 
-	public void setListado(Reptil listado[]) {
-		this.listado = listado;
+	public void setListado(ArrayList<Reptil> listado) {
+		Reptil.listado = listado;
 	}
 
 	public String getColorEscamas() {

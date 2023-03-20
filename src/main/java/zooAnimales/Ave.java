@@ -1,131 +1,30 @@
 package zooAnimales;
 
-import gestion.Zona;
+import java.util.ArrayList;
 
 public class Ave extends Animal {
-	private Ave listado[];
+	private static ArrayList<Ave> listado = new ArrayList<Ave>();
 	public int halcones;
 	public int aguilas;
 	private String colorPlumas;
 	
-	public Ave() {super();}
+	Ave() {
+		super("", 0, "", "");
+		}
 	
-	public Ave(String nombre)
-		{
-			super();
-			this.setNombre(nombre);
-			}
-	
-	public Ave(String nombre,
-			int edad)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat, String genero)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
+	Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
+		super(nombre, edad, habitat, genero);
 
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat, String genero, Zona zona[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-	
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Ave listado[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Ave listado[], int halcones)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.halcones = halcones;
-			}
-	
-	public Ave(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Ave listado[], int halcones, int aguilas)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			}
-	
-	public Ave(String nombre,
-		int edad, String habitat, String genero, Zona zona[], 
-		Ave listado[], int halcones, int aguilas,
-		String colorPlumas)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.halcones = halcones;
-		this.aguilas = aguilas;
 		this.colorPlumas = colorPlumas;
 		}
 	
-	public void cantidadAves() {
-		
+	public static int cantidadAves() {
+		return listado.size();
 	}
 	
 	@Override
-	public void movimiento() {
-		
+	public String movimiento() {
+		return "volar";
 	}
 	
 	public void crearHalcon() {
@@ -136,12 +35,12 @@ public class Ave extends Animal {
 		
 	}
 
-	public Ave[] getListado() {
-		return listado;
+	public ArrayList<Ave> getListado() {
+		return Ave.listado;
 	}
 
-	public void setListado(Ave listado[]) {
-		this.listado = listado;
+	public void setListado(ArrayList<Ave> listado) {
+		Ave.listado = listado;
 	}
 
 	public String getColorPlumas() {

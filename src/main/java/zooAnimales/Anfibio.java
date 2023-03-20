@@ -1,135 +1,35 @@
 package zooAnimales;
 
-import gestion.Zona;
+import java.util.ArrayList;
 
 public class Anfibio extends Animal {
-	private Anfibio listado[];
+	private static ArrayList<Anfibio> listado = new ArrayList<Anfibio>();
+	
 	public int ranas;
 	public int salamandras;
+	
 	private String colorPiel;
 	private boolean venenoso;
 	
-	public Anfibio() {
-		super();
-	}
-	
-	public Anfibio(String nombre)
-	{
-		super();
-		this.setNombre(nombre);
-		}
-	
-	public Anfibio(String nombre,
-			int edad)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero, Zona zona[])
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Anfibio listado[])
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Anfibio listado[], int ranas)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.ranas = ranas;
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.ranas = ranas;
-		this.salamandras = salamandras;
-		this.colorPiel = colorPiel;
-		}
-	
-	public Anfibio(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso)
-	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.ranas = ranas;
-		this.salamandras = salamandras;
+	Anfibio(String nombre, int edad, String habitat, String genero, String colorPiel, boolean venenoso) {
+		super(nombre, edad, habitat, genero);
 		this.colorPiel = colorPiel;
 		this.venenoso = venenoso;
+		
+		listado.add(this);
 		}
 	
-	public void cantidadAnfibios() {
-		
+	public Anfibio() {
+		this("", 0, "", "", "", false);
+	}
+	
+	public static int cantidadAnfibios() {
+		return listado.size();
 	}
 	
 	@Override
-	public void movimiento() {
-		
+	public String movimiento() {
+		return "saltar";
 	}
 	
 	public void crearRana() {
@@ -141,13 +41,13 @@ public class Anfibio extends Animal {
 	}
 
 
-	public Anfibio[] getListado() {
-		return listado;
+	public ArrayList<Anfibio> getListado() {
+		return Anfibio.listado;
 	}
 
 
-	public void setListado(Anfibio listado[]) {
-		this.listado = listado;
+	public void setListado(ArrayList<Anfibio> listado) {
+		Anfibio.listado = listado;
 	}
 
 

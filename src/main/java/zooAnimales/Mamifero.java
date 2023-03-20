@@ -1,144 +1,29 @@
 package zooAnimales;
 
-import gestion.Zona;
+import java.util.ArrayList;
 
 public class Mamifero extends Animal {
-	private Mamifero listado[];
+	private static ArrayList<Mamifero> listado = new ArrayList<Mamifero>();
 	public int caballos;
 	public int leones;
 	private boolean pelaje;
 	private int patas;
 	
-	public Mamifero() {super();}
-	
-	public Mamifero(String nombre)
-		{
-			super();
-			this.setNombre(nombre);
-			}
+	public Mamifero() {
+		this("", 0, "", "", false, 0);
+	}
 	
 	public Mamifero(String nombre,
-			int edad)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero, Zona zona[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Mamifero listado[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Mamifero listado[], int caballos)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.caballos = caballos;
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Mamifero listado[], int caballos, int leones)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.caballos = caballos;
-			this.leones = leones;
-			}
-	
-	public Mamifero(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Mamifero listado[], int caballos, int leones,
-			boolean pelaje)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.caballos = caballos;
-			this.leones = leones;
-			this.pelaje = pelaje;
-			}
-	
-	public Mamifero(String nombre,
-		int edad, String habitat, String genero, Zona zona[], 
-		Mamifero listado[], int caballos, int leones,
-		boolean pelaje, int patas)
+		int edad, String habitat, String genero, boolean pelaje, int patas)
 	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.caballos = caballos;
-		this.leones = leones;
+		super(nombre, edad, habitat, genero);
+
 		this.pelaje = pelaje;
 		this.patas = patas;
 		}
 	
-	public void cantidadMamiferos() {
-		
+	public static int cantidadMamiferos() {
+		return Mamifero.listado.size();
 	}
 	
 	public void crearCaballo() {
@@ -149,12 +34,12 @@ public class Mamifero extends Animal {
 		
 	}
 
-	public Mamifero[] getListado() {
-		return listado;
+	public ArrayList<Mamifero> getListado() {
+		return Mamifero.listado;
 	}
 
-	public void setListado(Mamifero listado[]) {
-		this.listado = listado;
+	public void setListado(ArrayList<Mamifero> listado) {
+		Mamifero.listado = listado;
 	}
 
 	public boolean isPelaje() {

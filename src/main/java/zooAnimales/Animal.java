@@ -3,67 +3,51 @@ package zooAnimales;
 import gestion.Zona;
 
 public class Animal {
-	private static int totalAnimales;
 	private String nombre;
 	private int edad;
 	private String habitat;
 	private String genero;
-	private Zona zona[];
+	
+	private Zona zona;
+	private static int totalAnimales;
+	
+	public Animal(String nombre, int edad, String habitat, String genero) {
+		this.nombre = nombre;
+		this.edad = edad;
+		this.habitat = habitat;
+		this.genero = genero;
+		
+		totalAnimales++;
+	}
 	
 	public Animal() {
-		totalAnimales++;
+		this("", 0, "", "");
 	}
 	
-	public Animal(String nombre) {
-		totalAnimales++;
-		this.setNombre(nombre);
-	}
-	
-	public Animal(String nombre, 
-			int edad) {
-		totalAnimales++;
-		this.setNombre(nombre);
-		this.setEdad(edad);
-	}
-	
-	public Animal(String nombre, 
-			int edad, String habitat) {
-		totalAnimales++;
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-	}
-	
-	public Animal(String nombre, 
-			int edad, String habitat, String genero) {
-		totalAnimales++;
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-	}
-	
-	public Animal(String nombre, 
-			int edad, String habitat, String genero, Zona zona[]) {
-		totalAnimales++;
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-	}
-	
-	public void movimiento() {
-		
+	public String movimiento() {
+		return "desplazarse";
 	}
 
-	public void totalPorTipo() {
-		
+	public String totalPorTipo() {
+		return "Mamiferos: " + Mamifero.cantidadMamiferos()
+				+ "\nAves: " + Ave.cantidadAves()
+				+ "\nReptiles: " + Reptil.cantidadReptiles()
+				+ "\nPeces: " + Pez.cantidadPeces()
+				+ "\nAnfibios: " + Anfibio.cantidadAnfibios()
+				;
 	}
 	
 	public String toString() {
-		return "";
-	}
+		String z = "Mi nombre es " + this.nombre 
+				+ ", tengo una edad de " + this.getEdad()
+				+ ", habito en " + this.getHabitat()
+				+ ", y mi genero es " + this.getGenero();
+
+				if (this.getZona() != null) {
+					 z += ", la zona en la que me ubico es " + this.getZona();
+					}
+		return z;
+		}
 
 	public int getTotalAnimales() {
 		return totalAnimales;
@@ -105,11 +89,11 @@ public class Animal {
 		this.genero = genero;
 	}
 
-	public Zona[] getZona() {
+	public Zona getZona() {
 		return zona;
 	}
 
-	public void setZona(Zona zona[]) {
+	public void setZona(Zona zona) {
 		this.zona = zona;
 	}
 }

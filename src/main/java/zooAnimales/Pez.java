@@ -1,148 +1,33 @@
 package zooAnimales;
 
-import gestion.Zona;
+import java.util.ArrayList;
 
 public class Pez extends Animal {
-	private Pez listado[];
+	private static ArrayList<Pez> listado = new ArrayList<Pez>();
 	public int salmones;
 	public int bacalaos;
 	private String colorEscamas;
 	private int cantidadAletas;
 	
-	public Pez() {super();}
-	
-	public Pez(String nombre)
-		{
-			super();
-			this.setNombre(nombre);
-			}
+	public Pez() {this("", 0, "", "", "", 0);}
 	
 	public Pez(String nombre,
-			int edad)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero, Zona zona[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Pez listado[])
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Pez listado[], int salmones)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.salmones = salmones;
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Pez listado[], int salmones, int bacalaos)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			}
-	
-	public Pez(String nombre,
-			int edad, String habitat, String genero, Zona zona[], 
-			Pez listado[], int salmones, int bacalaos, String colorEscamas)
-		{
-			super();
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-			this.setZona(zona);
-			
-			this.listado = listado;
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.colorEscamas = colorEscamas;
-			}
-	
-	public Pez(String nombre,
-		int edad, String habitat, String genero, Zona zona[], 
-		Pez listado[], int salmones, int bacalaos, String colorEscamas, int cantidadAletas)
+		int edad, String habitat, String genero, String colorEscamas, int cantidadAletas)
 	{
-		super();
-		this.setNombre(nombre);
-		this.setEdad(edad);
-		this.setHabitat(habitat);
-		this.setGenero(genero);
-		this.setZona(zona);
-		
-		this.listado = listado;
-		this.salmones = salmones;
-		this.bacalaos = bacalaos;
+		super(nombre, edad, habitat, genero);
+
 		this.colorEscamas = colorEscamas;
 		this.cantidadAletas = cantidadAletas;
 		}
 	
-	public void cantidadPeces() {
-		
+	public static int cantidadPeces() {
+		return listado.size();
 	}
 	
 	@Override
-	public void movimiento() {
-		
-	}
+	public String movimiento() {
+		return "nadar";
+		}
 	
 	public void crearSalmon() {
 		
@@ -152,12 +37,12 @@ public class Pez extends Animal {
 		
 	}
 
-	public Pez[] getListado() {
+	public ArrayList<Pez> getListado() {
 		return listado;
 	}
 
-	public void setListado(Pez listado[]) {
-		this.listado = listado;
+	public void setListado(ArrayList<Pez> listado) {
+		Pez.listado = listado;
 	}
 
 	public String getColorEscamas() {
