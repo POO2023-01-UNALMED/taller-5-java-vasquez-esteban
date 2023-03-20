@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Ave extends Animal {
 	private static ArrayList<Ave> listado = new ArrayList<Ave>();
-	public int halcones;
-	public int aguilas;
+	public static int halcones;
+	public static int aguilas;
 	private String colorPlumas;
 	
 	public Ave() {
@@ -28,14 +28,15 @@ public class Ave extends Animal {
 		return "volar";
 	}
 	
-	public void crearHalcon() {
-		new Ave("", 0, "montanas", "", "cafe glorioso");
+	public static Ave crearHalcon(String nombre, int edad, String genero) {
 		halcones++;
+		return new Ave(nombre, edad, "montanas", genero, "cafe glorioso");
+		
 	}
 	
-	public void crearAguila() {
-		new Ave("", 0, "montanas", "", "blanco y amarillo");
+	public static Ave crearAguila(String nombre, int edad, String genero) {
 		aguilas++;
+		return new Ave(nombre, edad, "montanas", genero, "blanco y amarillo");
 	}
 
 	public ArrayList<Ave> getListado() {
