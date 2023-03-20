@@ -9,151 +9,131 @@ public class Reptil extends Animal {
 	private String colorEscamas;
 	private int largoCola;
 	
-	public Reptil() {}
+	public Reptil() {super();}
 	
-	public Reptil(
-			Reptil listado[]) {
-			
-			this.setListado(listado);
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola,
-			int totalAnimales) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-			
-			this.setTotalAnimales(totalAnimales);
-		}
-	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola,
-			int totalAnimales, String nombre) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Reptil(String nombre)
+		{
+			super();
 			this.setNombre(nombre);
-		}
+			}
 	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola,
-			int totalAnimales, String nombre, int edad) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Reptil(String nombre,
+			int edad)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
-		}
+			}
 	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola,
-			int totalAnimales, String nombre, int edad, 
-			String habitat) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Reptil(String nombre,
+			int edad, String habitat)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
-		}
+			}
 	
-	public Reptil(
-			Reptil listado[], int iguanas, int serpientes,
-			String colorEscamas, int largoCola,
-			int totalAnimales, String nombre, int edad, 
-			String habitat, String genero) {
-			
-			this.setListado(listado);
-			this.iguanas = iguanas;
-			this.serpientes = serpientes;
-			this.setColorEscamas(colorEscamas);
-			this.setLargoCola(largoCola);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Reptil(String nombre,
+			int edad, String habitat, String genero)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
 			this.setGenero(genero);
-		}
+			}
 	
-	public Reptil(
-		Reptil listado[], int iguanas, int serpientes,
-		String colorEscamas, int largoCola,
-		int totalAnimales, String nombre, int edad, 
-		String habitat, String genero, Zona zona[]) {
-		
-		this.setListado(listado);
-		this.iguanas = iguanas;
-		this.serpientes = serpientes;
-		this.setColorEscamas(colorEscamas);
-		this.setLargoCola(largoCola);
-		
-		this.setTotalAnimales(totalAnimales);
+	public Reptil(String nombre,
+			int edad, String habitat, String genero, Zona zona[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			}
+	
+	public Reptil(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Reptil listado[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			}
+	
+	public Reptil(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Reptil listado[], int iguanas)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.iguanas = iguanas;
+			}
+	
+	public Reptil(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Reptil listado[], int iguanas, int serpientes)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			}
+	
+	public Reptil(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Reptil listado[], int iguanas, int serpientes, String colorEscamas)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.iguanas = iguanas;
+			this.serpientes = serpientes;
+			this.colorEscamas = colorEscamas;
+			}
+	
+	public Reptil(String nombre,
+		int edad, String habitat, String genero, Zona zona[], 
+		Reptil listado[], int iguanas, int serpientes, String colorEscamas, int largoCola)
+	{
+		super();
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
-	}
+		
+		this.listado = listado;
+		this.iguanas = iguanas;
+		this.serpientes = serpientes;
+		this.colorEscamas = colorEscamas;
+		this.largoCola = largoCola;
+		}
 	
 	public void cantidadReptiles() {
 		

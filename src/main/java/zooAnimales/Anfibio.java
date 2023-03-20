@@ -9,152 +9,119 @@ public class Anfibio extends Animal {
 	private String colorPiel;
 	private boolean venenoso;
 	
-	public Anfibio() {}
+	public Anfibio() {
+		super();
+	}
 	
-	public Anfibio(
-			Anfibio listado[]) {
-			
-			this.setListado(listado);
+	public Anfibio(String nombre)
+	{
+		super();
+		this.setNombre(nombre);
 		}
 	
-	public Anfibio(
-			Anfibio listado[], int ranas) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
+	public Anfibio(String nombre,
+			int edad)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
 		}
 	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
+	public Anfibio(String nombre,
+			int edad, String habitat)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
 		}
 	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
 		}
 	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-		}
-	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso,
-			int totalAnimales) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-			
-			this.setTotalAnimales(totalAnimales);
-		}
-	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso,
-			int totalAnimales, String nombre) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-			
-			this.setTotalAnimales(totalAnimales);
-			this.setNombre(nombre);
-		}
-	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso,
-			int totalAnimales, String nombre, int edad) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-			
-			this.setTotalAnimales(totalAnimales);
-			this.setNombre(nombre);
-			this.setEdad(edad);
-		}
-	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso,
-			int totalAnimales, String nombre, int edad, 
-			String habitat) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-			
-			this.setTotalAnimales(totalAnimales);
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-		}
-	
-	public Anfibio(
-			Anfibio listado[], int ranas, int salamandras,
-			String colorPiel, boolean venenoso,
-			int totalAnimales, String nombre, int edad, 
-			String habitat, String genero) {
-			
-			this.setListado(listado);
-			this.ranas = ranas;
-			this.salamandras = salamandras;
-			this.setColorPiel(colorPiel);
-			this.setVenenoso(venenoso);
-			
-			this.setTotalAnimales(totalAnimales);
-			this.setNombre(nombre);
-			this.setEdad(edad);
-			this.setHabitat(habitat);
-			this.setGenero(genero);
-		}
-	
-	public Anfibio(
-		Anfibio listado[], int ranas, int salamandras,
-		String colorPiel, boolean venenoso,
-		int totalAnimales, String nombre, int edad, 
-		String habitat, String genero, Zona zona[]) {
-		
-		this.setListado(listado);
-		this.ranas = ranas;
-		this.salamandras = salamandras;
-		this.setColorPiel(colorPiel);
-		this.setVenenoso(venenoso);
-		
-		this.setTotalAnimales(totalAnimales);
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero, Zona zona[])
+	{
+		super();
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
-	}
+		}
 	
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Anfibio listado[])
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
+		this.setZona(zona);
+		
+		this.listado = listado;
+		}
+	
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Anfibio listado[], int ranas)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
+		this.setZona(zona);
+		
+		this.listado = listado;
+		this.ranas = ranas;
+		}
+	
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Anfibio listado[], int ranas, int salamandras,
+			String colorPiel)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
+		this.setZona(zona);
+		
+		this.listado = listado;
+		this.ranas = ranas;
+		this.salamandras = salamandras;
+		this.colorPiel = colorPiel;
+		}
+	
+	public Anfibio(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Anfibio listado[], int ranas, int salamandras,
+			String colorPiel, boolean venenoso)
+	{
+		super();
+		this.setNombre(nombre);
+		this.setEdad(edad);
+		this.setHabitat(habitat);
+		this.setGenero(genero);
+		this.setZona(zona);
+		
+		this.listado = listado;
+		this.ranas = ranas;
+		this.salamandras = salamandras;
+		this.colorPiel = colorPiel;
+		this.venenoso = venenoso;
+		}
 	
 	public void cantidadAnfibios() {
 		

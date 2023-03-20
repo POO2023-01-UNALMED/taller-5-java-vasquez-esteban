@@ -8,135 +8,116 @@ public class Ave extends Animal {
 	public int aguilas;
 	private String colorPlumas;
 	
-	public Ave() {}
+	public Ave() {super();}
 	
-	public Ave(
-			Ave listado[]) {
-			
-			this.setListado(listado);
-		}
-	
-	public Ave(
-			Ave listado[], int halcones) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-		}
-	
-	public Ave(
-			Ave listado[], int halcones, int aguilas) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-		}
-	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-		}
-	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas,
-			int totalAnimales) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-			
-			this.setTotalAnimales(totalAnimales);
-		}
-	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas,
-			int totalAnimales, String nombre) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Ave(String nombre)
+		{
+			super();
 			this.setNombre(nombre);
-		}
+			}
 	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas,
-			int totalAnimales, String nombre, int edad) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Ave(String nombre,
+			int edad)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
-		}
+			}
 	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas,
-			int totalAnimales, String nombre, int edad, 
-			String habitat) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Ave(String nombre,
+			int edad, String habitat)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
-		}
+			}
 	
-	public Ave(
-			Ave listado[], int halcones, int aguilas,
-			String colorPlumas,
-			int totalAnimales, String nombre, int edad, 
-			String habitat, String genero) {
-			
-			this.setListado(listado);
-			this.halcones = halcones;
-			this.aguilas = aguilas;
-			this.setColorPlumas(colorPlumas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Ave(String nombre,
+			int edad, String habitat, String genero)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
 			this.setGenero(genero);
-		}
+
+			}
 	
-	public Ave(
+	public Ave(String nombre,
+			int edad, String habitat, String genero, Zona zona[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+	
+			}
+	
+	public Ave(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Ave listado[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			}
+	
+	public Ave(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Ave listado[], int halcones)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.halcones = halcones;
+			}
+	
+	public Ave(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Ave listado[], int halcones, int aguilas)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.halcones = halcones;
+			this.aguilas = aguilas;
+			}
+	
+	public Ave(String nombre,
+		int edad, String habitat, String genero, Zona zona[], 
 		Ave listado[], int halcones, int aguilas,
-		String colorPlumas,
-		int totalAnimales, String nombre, int edad, 
-		String habitat, String genero, Zona zona[]) {
-		
-		this.setListado(listado);
-		this.halcones = halcones;
-		this.aguilas = aguilas;
-		this.setColorPlumas(colorPlumas);
-		
-		this.setTotalAnimales(totalAnimales);
+		String colorPlumas)
+	{
+		super();
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
-	}
-	
+		
+		this.listado = listado;
+		this.halcones = halcones;
+		this.aguilas = aguilas;
+		this.colorPlumas = colorPlumas;
+		}
 	
 	public void cantidadAves() {
 		

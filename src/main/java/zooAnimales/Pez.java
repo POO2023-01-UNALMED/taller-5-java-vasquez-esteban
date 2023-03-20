@@ -9,150 +9,131 @@ public class Pez extends Animal {
 	private String colorEscamas;
 	private int cantidadAletas;
 	
-	public Pez() {}
+	public Pez() {super();}
 	
-	public Pez(
-			Pez listado[]) {
-			this.setListado(listado);
-		}
-			
-	public Pez(
-			Pez listado[], int salmones) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-		}
-	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-		}
-	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-		}
-	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-		}
-	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas,
-			int totalAnimales) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-			
-			this.setTotalAnimales(totalAnimales);
-		}
-	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas,
-			int totalAnimales, String nombre) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Pez(String nombre)
+		{
+			super();
 			this.setNombre(nombre);
-		}
+			}
 	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas,
-			int totalAnimales, String nombre, int edad) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Pez(String nombre,
+			int edad)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
-		}
+			}
 	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas,
-			int totalAnimales, String nombre, int edad, 
-			String habitat) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Pez(String nombre,
+			int edad, String habitat)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
-		}
+			}
 	
-	public Pez(
-			Pez listado[], int salmones, int bacalaos,
-			String colorEscamas, int cantidadAletas,
-			int totalAnimales, String nombre, int edad, 
-			String habitat, String genero) {
-			
-			this.setListado(listado);
-			this.salmones = salmones;
-			this.bacalaos = bacalaos;
-			this.setColorEscamas(colorEscamas);
-			this.setCantidadAletas(cantidadAletas);
-			
-			this.setTotalAnimales(totalAnimales);
+	public Pez(String nombre,
+			int edad, String habitat, String genero)
+		{
+			super();
 			this.setNombre(nombre);
 			this.setEdad(edad);
 			this.setHabitat(habitat);
 			this.setGenero(genero);
-		}
+			}
 	
-	public Pez(
-		Pez listado[], int salmones, int bacalaos,
-		String colorEscamas, int cantidadAletas,
-		int totalAnimales, String nombre, int edad, 
-		String habitat, String genero, Zona zona[]) {
-		
-		this.setListado(listado);
-		this.salmones = salmones;
-		this.bacalaos = bacalaos;
-		this.setColorEscamas(colorEscamas);
-		this.setCantidadAletas(cantidadAletas);
-		
-		this.setTotalAnimales(totalAnimales);
+	public Pez(String nombre,
+			int edad, String habitat, String genero, Zona zona[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			}
+	
+	public Pez(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Pez listado[])
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			}
+	
+	public Pez(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Pez listado[], int salmones)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.salmones = salmones;
+			}
+	
+	public Pez(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Pez listado[], int salmones, int bacalaos)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.salmones = salmones;
+			this.bacalaos = bacalaos;
+			}
+	
+	public Pez(String nombre,
+			int edad, String habitat, String genero, Zona zona[], 
+			Pez listado[], int salmones, int bacalaos, String colorEscamas)
+		{
+			super();
+			this.setNombre(nombre);
+			this.setEdad(edad);
+			this.setHabitat(habitat);
+			this.setGenero(genero);
+			this.setZona(zona);
+			
+			this.listado = listado;
+			this.salmones = salmones;
+			this.bacalaos = bacalaos;
+			this.colorEscamas = colorEscamas;
+			}
+	
+	public Pez(String nombre,
+		int edad, String habitat, String genero, Zona zona[], 
+		Pez listado[], int salmones, int bacalaos, String colorEscamas, int cantidadAletas)
+	{
+		super();
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 		this.setZona(zona);
-	}
+		
+		this.listado = listado;
+		this.salmones = salmones;
+		this.bacalaos = bacalaos;
+		this.colorEscamas = colorEscamas;
+		this.cantidadAletas = cantidadAletas;
+		}
 	
 	public void cantidadPeces() {
 		

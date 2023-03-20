@@ -3,57 +3,49 @@ package zooAnimales;
 import gestion.Zona;
 
 public class Animal {
-	private int totalAnimales;
+	private static int totalAnimales;
 	private String nombre;
 	private int edad;
 	private String habitat;
 	private String genero;
 	private Zona zona[];
 	
-	public Animal() {}
-	
-	public Animal(int totalAnimales) {
-		
-		this.setTotalAnimales(totalAnimales);
+	public Animal() {
+		totalAnimales++;
 	}
 	
-	public Animal(int totalAnimales, String nombre) {
-		
-		this.setTotalAnimales(totalAnimales);
+	public Animal(String nombre) {
+		totalAnimales++;
 		this.setNombre(nombre);
 	}
 	
-	public Animal(int totalAnimales, String nombre, 
+	public Animal(String nombre, 
 			int edad) {
-		
-		this.setTotalAnimales(totalAnimales);
+		totalAnimales++;
 		this.setNombre(nombre);
 		this.setEdad(edad);
 	}
 	
-	public Animal(int totalAnimales, String nombre, 
+	public Animal(String nombre, 
 			int edad, String habitat) {
-		
-		this.setTotalAnimales(totalAnimales);
+		totalAnimales++;
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 	}
 	
-	public Animal(int totalAnimales, String nombre, 
+	public Animal(String nombre, 
 			int edad, String habitat, String genero) {
-		
-		this.setTotalAnimales(totalAnimales);
+		totalAnimales++;
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
 		this.setGenero(genero);
 	}
 	
-	public Animal(int totalAnimales, String nombre, 
+	public Animal(String nombre, 
 			int edad, String habitat, String genero, Zona zona[]) {
-		
-		this.setTotalAnimales(totalAnimales);
+		totalAnimales++;
 		this.setNombre(nombre);
 		this.setEdad(edad);
 		this.setHabitat(habitat);
@@ -77,8 +69,8 @@ public class Animal {
 		return totalAnimales;
 	}
 
-	public void setTotalAnimales(int totalAnimales) {
-		this.totalAnimales = totalAnimales;
+	public static void setTotalAnimales(int totalAnimales) {
+		Animal.totalAnimales = totalAnimales;
 	}
 
 	public String getNombre() {
