@@ -41,10 +41,10 @@ public class Animal {
 		String z = "Mi nombre es " + this.nombre 
 				+ ", tengo una edad de " + this.getEdad()
 				+ ", habito en " + this.getHabitat()
-				+ ", y mi genero es " + this.getGenero();
+				+ " y mi genero es " + this.getGenero();
 
 				if (this.getZona() != null) {
-					 z += ", la zona en la que me ubico es " + this.getZona();
+					 z += ", la zona en la que me ubico es " + this.getZona() + ", en el " + this.getZona().getZoo();
 					}
 		return z;
 		}

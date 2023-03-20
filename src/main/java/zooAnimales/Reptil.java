@@ -20,6 +20,7 @@ public class Reptil extends Animal {
 			
 			this.colorEscamas = colorEscamas;
 			this.largoCola = largoCola;
+			listado.add(this);
 		}
 	
 	public static int cantidadReptiles() {
@@ -32,11 +33,13 @@ public class Reptil extends Animal {
 	}
 	
 	public void crearIguana() {
-		
+		new Reptil("", 0, "humedal", "", "verde", 3);
+		iguanas++;
 	}
 	
 	public void crearSerpiente() {
-		
+		new Reptil("", 0, "jungla", "", "blanco", 1);
+		serpientes++;
 	}
 
 	public ArrayList<Reptil> getListado() {

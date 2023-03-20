@@ -20,6 +20,7 @@ public class Mamifero extends Animal {
 
 		this.pelaje = pelaje;
 		this.patas = patas;
+		listado.add(this);
 		}
 	
 	public static int cantidadMamiferos() {
@@ -27,11 +28,13 @@ public class Mamifero extends Animal {
 	}
 	
 	public void crearCaballo() {
-		
+		new Mamifero("", 0, "pradera", "", true, 4);
+		caballos++;
 	}
 	
 	public void crearLeon() {
-		
+		new Mamifero("", 0, "selva", "", true, 4);
+		leones++;
 	}
 
 	public ArrayList<Mamifero> getListado() {
